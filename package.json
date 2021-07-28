@@ -1,12 +1,45 @@
 {
   "name": "manga-sword-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "project backend with nodejs and express for create any API that will be use in frontend",
+  "main": "./src/index.js",
   "scripts": {
+    "ts:node": "ts-node src/",
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "start": "node dist/src",
+    "dev": "nodemon",
+    "deploy": "echo missing create this command",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": {
+    "name": "Juan Esteban Echeverry Perdomo",
+    "url": "https://github.com/Juanestban"
+  },
+  "repository": {
+    "url": "https://github.com/Juanestban/manga-sword-backend"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "mongoose": "5.13.3"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/morgan": "1.9.3",
+    "@typescript-eslint/eslint-plugin": "4.28.5",
+    "@typescript-eslint/parser": "4.28.5",
+    "eslint": "7.31.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "morgan": "1.10.0",
+    "nodemon": "2.0.12",
+    "prettier": "2.3.2",
+    "ts-node": "10.1.0",
+    "typescript": "4.3.5"
+  }
 }
