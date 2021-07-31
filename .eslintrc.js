@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     'comma-dangle': 0,
     'import/first': 0,
+    'space-before-function-paren': 0,
   },
 }
