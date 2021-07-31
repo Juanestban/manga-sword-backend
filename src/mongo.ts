@@ -10,10 +10,13 @@ const keys: Keys = {
   URI: `mongodb://${cred.user}:${cred.password}@localhost:27017/MangaSword?authSource=admin&retryWrites=true`,
 }
 
+// mongodb
 mongoose
   .connect(keys.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
     auth: {
       user: cred.user,
       password: cred.password,

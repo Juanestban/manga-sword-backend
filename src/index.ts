@@ -5,7 +5,7 @@ import { router } from './routes/index.routes'
 
 // Initializations
 const app: Express = express()
-import './database'
+import './mongo'
 
 // Settings
 app.set('port', process.env.PORT || 3200)
@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // Routes
-app.use(router)
+app.use('/api', router)
 
 //  Static files
 app.use(express.static(path.join(__dirname, 'public')))

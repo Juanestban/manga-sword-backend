@@ -17,6 +17,7 @@
     "name": "Juan Esteban Echeverry Perdomo",
     "url": "https://github.com/Juanestban"
   },
+  "type": "module",
   "repository": {
     "url": "https://github.com/Juanestban/manga-sword-backend"
   },
