@@ -7,8 +7,8 @@
     "ts:node": "ts-node src/",
     "clean": "rm -rf dist",
     "build": "tsc",
-    "start": "node dist/src",
-    "dev": "nodemon",
+    "start": "NODE_ENV=production node dist/src",
+    "dev": "NODE_ENV=development nodemon",
     "deploy": "echo missing create this command",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,17 +17,18 @@
     "name": "Juan Esteban Echeverry Perdomo",
     "url": "https://github.com/Juanestban"
   },
-  "type": "module",
   "repository": {
     "url": "https://github.com/Juanestban/manga-sword-backend"
   },
   "license": "ISC",
   "dependencies": {
     "cors": "2.8.5",
+    "dotenv": "10.0.0",
     "express": "4.17.1",
     "mongoose": "5.13.3"
   },
   "devDependencies": {
+    "@types/cors": "2.8.12",
     "@types/express": "4.17.13",
     "@types/morgan": "1.9.3",
     "@typescript-eslint/eslint-plugin": "4.28.5",
