@@ -1,4 +1,7 @@
 import { Router, Request, Response } from 'express'
+import readersRouter from './readers.routes'
+import { handlerNotFound } from '../middlewares/handlerNotFound'
+import { handlerErrors } from '../middlewares/handlerErrors'
 
 const router: Router = Router()
 
@@ -13,5 +16,13 @@ router.get('/', async (_: Request, res: Response): Promise<Response<any>> => {
     })
   }
 })
+
+router.use(readersRouter)
+
+// middleware when url hasn't exist
+router.use(handlerNotFound)
+
+// middleware handler error
+router.use(handlerErrors)
 
 export { router }
