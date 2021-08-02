@@ -5,6 +5,9 @@
 ### ENVIRONMENT ###
 .env
 
+### test ###
+test/
+
 ### npm ###
 package-lock.json
 
