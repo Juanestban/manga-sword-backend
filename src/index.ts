@@ -2,10 +2,12 @@ import express, { Express } from 'express'
 import morgan from 'morgan'
 import path from 'path'
 import cors from 'cors'
+import dotenv from 'dotenv'
 import { router } from './routes/index.routes'
 
 // Initializations
 const app: Express = express()
+dotenv.config()
 import './mongo'
 
 // Settings

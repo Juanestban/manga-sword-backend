@@ -1,13 +1,13 @@
 import mongoose from 'mongoose'
-import { Keys, Credentials } from './models/Database'
+import { Keys } from './models/Database'
 
-const cred: Credentials = {
-  user: 'mongoadmin',
-  password: 'mongoadmin',
-}
-
+// const cred: Credentials = {
+//   user: 'mongoadmin',
+//   password: 'mongoadmin',
+// }
+console.log(process.env.USER_NAME, process.env.PASSWORD)
 const keys: Keys = {
-  URI: `mongodb://${cred.user}:${cred.password}@localhost:27017/MangaSword?authSource=admin&retryWrites=true`,
+  URI: `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@manga-sword-cluster01.7jzn1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 }
 
 // mongodb
@@ -17,10 +17,6 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex: true,
-    auth: {
-      user: cred.user,
-      password: cred.password,
-    },
   })
   .then(() => console.log('mongoDB is conected'))
   .catch((err) => console.error(err))
