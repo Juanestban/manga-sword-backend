@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "description": "project backend with nodejs and express for create any API that will be use in frontend",
   "main": "./src/index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "ts:node": "ts-node src/",
     "clean": "rm -rf dist",
     "build": "tsc",
     "start": "NODE_ENV=production node dist/src",
     "dev": "NODE_ENV=development nodemon",
-    "deploy": "echo missing create this command",
+    "deploy": "npm run clean && npm run build",
+    "predeploy": "npm run clean && npm run build && npm start",
     "test": "jest",
     "test:w": "jest --watchAll"
   },
