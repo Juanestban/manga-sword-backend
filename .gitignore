@@ -2,6 +2,15 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,react,visualstudiocode,phpstorm,macos,mean,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,react,visualstudiocode,phpstorm,macos,mean,visualstudio
 
+### ENVIRONMENT ###
+.env
+
+### test ###
+test/
+
+### npm ###
+package-lock.json
+
 ### Linux ###
 *~
 
